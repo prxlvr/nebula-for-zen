@@ -98,6 +98,8 @@ tab[label$=".pdf"] .tab-label-container {
   border-bottom-left-radius: var(--nebula-border-radius) !important;
   transition: background-color 0.2s ease-out !important;
   position: relative;
+  margin-left: calc(-1 * var(--tab-inline-padding) + var(--tab-margin-block) + 2px) !important;
+  padding: 0 calc(var(--toolbarbutton-padding-inner) - 2px) 0 calc(var(--toolbarbutton-padding-inner) / 3 + var(--tab-inline-padding) - 4px) !important;
   z-index: 5;
 }
 

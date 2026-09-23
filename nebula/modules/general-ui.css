@@ -250,3 +250,9 @@ browser {
   transform: scale(1.05);
   box-shadow: 0 6px 20px var(--nebula-color-shadow) !important;
 }
+
+*,
+*::before,
+*::after {
+  corner-shape: initial !important;
+}
