@@ -251,8 +251,14 @@ browser {
   box-shadow: 0 6px 20px var(--nebula-color-shadow) !important;
 }
 
-*,
-*::before,
-*::after {
-  corner-shape: initial !important;
+/* Restore rounded corners */
+@media (-moz-pref("layout.css.corner-shape.enabled")) {
+    :not(.no-squircles),
+    .zen-squircle-before::before,
+    .zen-squircle-after::after {
+        corner-shape: initial !important;
+    }
+    button {
+        border-radius: var(--button-border-radius) !important;
+    }
 }
