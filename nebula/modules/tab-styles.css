@@ -98,36 +98,41 @@ tab[label$=".pdf"] .tab-label-container {
   border-bottom-left-radius: var(--nebula-border-radius) !important;
   transition: background-color 0.2s ease-out !important;
   position: relative;
-  margin-left: calc(-1 * var(--tab-inline-padding) + var(--tab-margin-block) + 2px) !important;
-  padding: 0 calc(var(--toolbarbutton-padding-inner) - 2px) 0 calc(var(--toolbarbutton-padding-inner) / 3 + var(--tab-inline-padding) - 4px) !important;
+  margin-left: calc(
+    -1 * var(--tab-inline-padding) + var(--tab-margin-block) + 2px
+  ) !important;
+  padding: 0 calc(var(--toolbarbutton-padding-inner) - 2px) 0
+    calc(
+      var(--toolbarbutton-padding-inner) / 3 + var(--tab-inline-padding) - 4px
+    ) !important;
   z-index: 5;
 }
 
 /* Config: Disable gradient on tab close/reset hover */
 @media not (-moz-pref("nebula-disable-close-reset-gradient")) {
-    /* Gradient overlay (right side) */
-    .tabbrowser-tab .tab-background::before {
+  /* Gradient overlay (right side) */
+  .tabbrowser-tab .tab-background::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to left,
-        rgb(175 10 10 / 75%),
-        rgb(175 30 10 / 0%) 40%,
-        transparent 40%
+      to left,
+      rgb(175 10 10 / 75%),
+      rgb(175 30 10 / 0%) 40%,
+      transparent 40%
     );
     filter: blur(12px) contrast(120%) brightness(150%);
     opacity: 0;
     transition: opacity 0.3s ease !important;
     z-index: 3; /* under buttons */
     pointer-events: none; /* prevents hover conflicts */
-    }
+  }
 
-    /* Show gradient when hovering close/reset */
-    .tabbrowser-tab:has(.tab-close-button:hover, .tab-reset-button:hover)
+  /* Show gradient when hovering close/reset */
+  .tabbrowser-tab:has(.tab-close-button:hover, .tab-reset-button:hover)
     .tab-background::before {
     opacity: 0.7 !important;
-    }
+  }
 }
 
 /* Buttons */

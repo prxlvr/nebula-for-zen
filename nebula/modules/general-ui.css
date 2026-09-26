@@ -253,12 +253,13 @@ browser {
 
 /* Restore rounded corners */
 @media (-moz-pref("layout.css.corner-shape.enabled")) {
-    :not(.no-squircles),
-    .zen-squircle-before::before,
-    .zen-squircle-after::after {
-        corner-shape: initial !important;
-    }
-    button {
-        border-radius: var(--button-border-radius) !important;
-    }
+  :not(.no-squircles),
+  .zen-squircle-before::before,
+  .zen-squircle-after::after {
+    corner-shape: initial !important;
+  }
+
+  button {
+    border-radius: var(--button-border-radius) !important;
+  }
 }
